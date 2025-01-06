@@ -1,4 +1,8 @@
-# Dear Imgui Sample using OpenTK
+# ImGuiTK
+
+This package is a refined version of [Julius Häger’s Sample](https://github.com/NogginBops/ImGui.NET_OpenTK_Sample) made into a reusable package.
+- [GitHub](https://github.com/Grille/Grille.ImGuiTK)
+- [NuGet](https://www.nuget.org/packages/Grille.ImGuiTK/)
 
 ## OpenTK 4
 
