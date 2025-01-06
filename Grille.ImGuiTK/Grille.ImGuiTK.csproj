@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net6.0;net8.0</TargetFrameworks>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Version>3.0.2</Version>
+
+		<Title>Grille.ImGuiTK</Title>
+		<PackageId>Grille.ImGuiTK</PackageId>
+		<Authors>Julius Häger, Grille</Authors>
+		<Description>OpenTK backend for ImGui.NET</Description>
+		<Copyright>Julius Häger, Grille</Copyright>
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageTags>ImGui ImGui.NET OpenTK OpenGL</PackageTags>
+		<RepositoryUrl>https://github.com/Grille/Grille.ImGuiTK</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\icon.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+	
+	<ItemGroup>
+		<None Remove="GLSL\main.frag" />
+		<None Remove="GLSL\main.vert" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="GLSL\main.frag" />
+		<EmbeddedResource Include="GLSL\main.vert" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="ImGui.NET" Version="1.90.0.1" />
+		<PackageReference Include="OpenTK" Version="4.8.2" />
+	</ItemGroup>
+
+</Project>
